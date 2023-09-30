@@ -11,6 +11,8 @@ class Tag extends Model
 {
     use HasFactory, SoftDeletes;
 
+    protected $guarded = ['id'];
+
     public function series(): BelongsToMany
     {
         return $this->belongsToMany(Tag::class);

@@ -12,6 +12,8 @@ class Serie extends Model
 {
     use HasFactory, SoftDeletes;
 
+    protected $guarded = ['id'];
+
     protected $casts = [
         'available_at' => 'date',
     ];
